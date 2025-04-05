@@ -29,7 +29,7 @@ app.post("/path", (req, res) => res.send("POST request"));
 app.put("/path", (req, res) => res.send("PUT request"));
 app.patch("/path", (req, res) => res.send("PATCH request"));
 app.delete("/path", (req, res) => res.send("DELETE request"));
-app.all("/path", (req, res) => res.send("All Methods")); // Tüm HTTP metodları için çalışır
+app.all("/path", (req, res) => res.send("All Methods")); // Runs for all HTTP Methods
 ```
 
 # 🧩 Chainable Route Method
