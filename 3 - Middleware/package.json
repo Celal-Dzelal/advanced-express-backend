@@ -1,0 +1,19 @@
+{
+  "name": "3---middleware",
+  "version": "1.0.0",
+  "description": "```\r npm init -y                   # Create package.json (initialize project)\r npm install -D nodemon        # Install nodemon as a dev dependency\r npm install express dotenv    # Install express and dotenv\r echo PORT=8000 > .env         # Create .env file and set PORT\r ```",
+  "main": "middleware.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0"
+  }
+}
