@@ -6,7 +6,7 @@
 npm init -y  # Initialize the project and create package.json
 npm i -D nodemon  # Install Nodemon for automatic reloading during development
 npm i express dotenv  # Install Express and Dotenv packages
-npm i express-async-errors  # Install this package to handle asynchronous errors
+npm i express-async-errors  # Install this package to handle asynchronous errors (Since the express-async-errors package is not compatible with express5, express5 users cannot install this package. Since express5 already supports async/await natively, it is sufficient to add a global error middleware.)
 echo PORT=8000 > .env  # Add the PORT=8000 value to the .env file
 ```
 
