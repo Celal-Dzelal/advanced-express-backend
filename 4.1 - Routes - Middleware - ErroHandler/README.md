@@ -1,4 +1,4 @@
-# 📘 Express.js – Middleware and Router Structure (Study Notes)
+# 📘 Express.js – Middleware and Router Structure
 
 This mini project demonstrates how to build a basic **Express.js** application focusing on:
 
@@ -93,7 +93,7 @@ module.exports = (err, req, res, next) => {
 
 - Must be defined at the end of all app.use() calls in app.js.
 
-### 🎯 8. Key Takeaways
+### 🎯 5. Key Takeaways
 
 - Middleware functions run in sequence and are connected via next().
 
