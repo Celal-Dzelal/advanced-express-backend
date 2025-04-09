@@ -118,6 +118,11 @@ app.use(express.json());
 
 - In this example, we create a simple Todo API with the following CRUD (Create, Read, Update, Delete) operations using Sequelize.
 
+```
+const router = express.Router();
+app.use(router);
+```
+
 ## Create (POST)
 
 ```
