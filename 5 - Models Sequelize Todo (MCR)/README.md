@@ -90,6 +90,10 @@ const Todo = sequelize.define("todos", {
   },
 });
 
+// Syncronization
+
+// sequelize.sync()
+
 // Test database connection
 sequelize.authenticate()
   .then(() => console.log("* DB Connected"))
@@ -182,16 +186,11 @@ module.exports = {
 const router = require("express").Router();
 const todoController = require("../controllers/todo.controller");
 
-// Routes for listing and creating Todos
-router.get("/todos", todoController.list);
-router.route("/todos").get(todoController.list).post(todoController.create);
+// Routes for listing and CRUD
 
-// Routes for reading, updating, and deleting Todos by ID
-router
-  .route("/todos/:id")
-  .get(todoController.read)
-  .put(todoController.update)
-  .delete(todoController.delete);
+router.route("/todos").get(todo.list).post(todo.create);
+
+router.route("/todos/:id").get(todo.read).put(todo.update).delete(todo.delete);
 
 module.exports = router;
 ```
