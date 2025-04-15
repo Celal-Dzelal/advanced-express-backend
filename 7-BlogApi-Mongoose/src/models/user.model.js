@@ -12,7 +12,7 @@ const passwordEncrypte = (password) => {
   const digist = "sha512"; //* Algorithm which we will use
   return crypto
     .pbkdf2Sync(password, salt, iteration, keylen, digist)
-    .toString(hex); //* Data comes as buffer in first time, therefore, we transform to string hex.
+    .toString("hex"); //* Data comes as buffer in first time, therefore, we transform to string hex.
 };
 
 const UserSchema = new mongoose.Schema(

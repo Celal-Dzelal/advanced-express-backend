@@ -18,8 +18,8 @@ app.use(express.json());
 
 app.all("/", (req, res) => res.send("Welcome to Blog API By Dzelal")); //* Main Route
 
-app.use("/blogs", require("./src/routes/blog.router")); //* Do not ready yet
-// app.use("/users",require("./src/")) //* Do not ready yet
+app.use("/blogs", require("./src/routes/blog.router")); //* Do not user before creates
+app.use("/users", require("./src/routes/user.router")); //* Do not user before creates
 
 /*//! ------------------------------ DB Connection ----------------------------- */
 
