@@ -14,6 +14,17 @@ const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
 
+/*//! ---------------------------- PasswordEncrypte ---------------------------- */
+const session = require("cookie-session");
+
+app.use(
+  session({
+    secret: process.env.PASS_SALT,
+  })
+);
+
+app.use(require("./src/middlewares/userControl"));
+
 /*//! --------------------------------- Routes --------------------------------- */
 
 app.all("/", (req, res) => res.send("Welcome to Blog API By Dzelal")); //* Main Route
