@@ -52,3 +52,7 @@ app.use(require("./src/middlewares/errorHandler")); //* Do not use before create
 /*//! ------------------------------ Start Server ------------------------------ */
 
 app.listen(PORT, () => console.log(`Running at http://127.0.0.1:${PORT}`));
+
+/*//! ----------------------------- Syncronization ----------------------------- */
+
+// require("./sync")(); //* Run only once
