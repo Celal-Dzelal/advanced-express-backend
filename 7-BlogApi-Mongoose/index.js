@@ -1,6 +1,6 @@
 "use strict";
 
-// npm init -y && npm i mongoose express dotenv && npm i -D nodemon //* Setup command
+// npm init -y && npm i mongoose express dotenv && npm i -D nodemon && cookie-sessionn //* Setup command
 // printf "PORT=8000\nDB_URI=mongodb://writeYourDbUrlHere/yourDbName\n" > .env //* .env dosyasının içini oluştur
 
 /*//! ---------------------------- Initial Commands ---------------------------- */
