@@ -67,8 +67,10 @@ module.exports.blogCategory = {
 module.exports.blogPost = {
   //* We export an object which name is blogCategory, there are five method in it.
   list: async (req, res) => {
+    //* FILTERING & SEARCHING & SORTING & PAGINATION
+    //? Filter searches for absolutes equality, Search: searches for partial equality
     //* It brings all the categories from the database. If it is success, returns 200 OK answer.
-    const result = await BlogPost.find();
+    const result = await BlogPost.find().populate(["categoryId", "userId"]);
     res.status(200).send({
       error: false,
       result,

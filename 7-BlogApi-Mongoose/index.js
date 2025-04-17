@@ -14,6 +14,11 @@ const PORT = process.env.PORT || 8000;
 
 app.use(express.json());
 
+/*//! ------------------------------- QueryParser ------------------------------ */
+
+const queryParser = require("./src/middlewares/queryParser");
+app.use(queryParser);
+
 /*//! ---------------------------- PasswordEncrypte ---------------------------- */
 const session = require("cookie-session");
 
