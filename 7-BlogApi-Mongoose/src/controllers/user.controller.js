@@ -34,7 +34,7 @@ module.exports = {
     });
   },
   delete: async (req, res) => {
-    const result = await User.deleteOne(req.params.id);
+    const result = await User.deleteOne({ _id: req.params.id });
     if (!result) {
       res.errorStatusCode = 404;
       throw new Error("Data not found or already deleted");

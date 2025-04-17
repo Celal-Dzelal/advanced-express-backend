@@ -1,6 +1,6 @@
 "use strict";
 
-// npm init -y && npm i mongoose express dotenv && npm i -D nodemon && cookie-sessionn //* Setup command
+// npm init -y && npm i mongoose express dotenv && npm i -D nodemon && cookie-session //* Setup command
 // printf "PORT=8000\nDB_URI=mongodb://writeYourDbUrlHere/yourDbName\n" > .env //* .env dosyasının içini oluştur
 
 /*//! ---------------------------- Initial Commands ---------------------------- */
@@ -35,6 +35,15 @@ app.use("/users", require("./src/routes/user.router")); //* Do not user before c
 /*//! ------------------------------ DB Connection ----------------------------- */
 
 require("./src/dbConnection")(); //* Do not use before create
+
+/*//! ----------------------------- NotFound Route ----------------------------- */
+
+app.use("*", (req, res) => {
+  res.status(404).send({
+    error: true,
+    message: "This route not found",
+  });
+});
 
 /*//! ------------------------------ ErrorHandler ------------------------------ */
 
